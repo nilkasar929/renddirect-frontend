@@ -11,6 +11,7 @@ import Register from './pages/auth/Register';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import PropertyList from './pages/properties/PropertyList';
 import PropertyDetails from './pages/properties/PropertyDetails';
+import CityLanding from './pages/properties/CityLanding';
 
 // Protected Pages
 import Messages from './pages/messages/Messages';
@@ -127,6 +128,9 @@ const App: React.FC = () => {
         {/* Public property browsing */}
         <Route path="/properties" element={<PropertyList />} />
         <Route path="/properties/:id" element={<PropertyDetails />} />
+
+        {/* SEO-friendly city landing pages */}
+        <Route path="/rent/:city" element={<CityLanding />} />
 
         {/* Protected: Messages */}
         <Route path="/messages" element={
